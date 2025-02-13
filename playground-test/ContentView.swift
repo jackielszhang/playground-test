@@ -10,12 +10,23 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack(alignment: .center, spacing: 8) {
+                Text("Blocks")
+                  .font(
+                    Font.custom("Inter", size: Constants.TitlePageSizeBase)
+                        .weight(.black)
+                  )
+                  .foregroundColor(Constants.TextNeutralOnNeutral)
+                
+            }
+            .padding(.horizontal, 0)
+            .padding(.vertical, 16)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding()
+        .padding(.horizontal, 23)
+        .padding(.vertical, 42)
+        .frame(maxWidth: .infinity, maxHeight : .infinity, alignment: .top)
+        .background(Constants.BackgroundBrandDefault)
     }
 }
 
